@@ -20,5 +20,6 @@ from appp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.Home.as_view())
+    path('',views.Home.as_view()),
+    path('reg',views.Register.as_view(),name="register"),
 ]

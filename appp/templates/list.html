@@ -27,6 +27,7 @@
             <td>{{i.pricr}}</td> 
             <td><a href="{% url 'view' i.id %}">View</a></td> 
             <td><a href="{% url 'delete' i.id %}">Delete</a></td> 
+            <td><a href="{% url 'update' i.id %}">Update</a></td> 
         </tr>
         {% endfor %}
 

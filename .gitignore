@@ -1,1 +1,3 @@
 -e "__pycache__/\n*.pyc\nenv/\n*.sqlite3" 
+__pycache__/
+*.pyc

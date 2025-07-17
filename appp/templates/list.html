@@ -16,6 +16,7 @@
             <th>id</th>
             <th>items</th>
             <th>price</th> <!--give any name-->
+            <th>Action</th>
         
         </tr>
 
@@ -23,7 +24,9 @@
         <tr>
             <td>{{i.id}}</td>
             <td>{{i.name}}</td> <!--i.colum_name   (name in model) -->
-            <td>{{i.pricr}}</td>  
+            <td>{{i.pricr}}</td> 
+            <td><a href="{% url 'view' i.id %}">View</a></td> 
+            <td><a href="{% url 'delete' i.id %}">Delete</a></td> 
         </tr>
         {% endfor %}
 

@@ -38,3 +38,21 @@ class Productdlt(View):
         n=Product.objects.get(id=m)
         n.delete()
         return redirect("list") #give name in  url for that template page
+    
+    
+class Productupdate(View):
+    def get(self,request,*args,**kwargs):
+        h=kwargs.get("id")
+        o=Product.objects.get(id=h)
+        return render(request,"register.html",{"k":o})  
+    # u have 2  way either create a new html for edit  and pass the above key inside "value"
+    # or
+    # in the register form give "value" and  call inside  it 
+    
+    def post(self,request,*args,**kwargs):
+        w=kwargs.get("id")
+        u=Product.objects.get(id=w)
+        u.name=request.POST.get("items")  #post.get name in (form)
+        u.pricr=request.POST.get("cost")
+        u.save()
+        return redirect("list")

@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Home.as_view()),
     path('reg',views.Register.as_view(),name="register"),
+    path('list',views.ProductList.as_view(),name="list")
 ]
